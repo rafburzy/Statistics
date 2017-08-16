@@ -1,3 +1,5 @@
+import numpy as np
+
 def ecdf(data):
     """Compute ECDF for a one-dimensional array of measurements."""
 
