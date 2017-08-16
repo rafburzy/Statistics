@@ -13,3 +13,25 @@ def ecdf(data):
     y = np.arange(1, n+1) / n
 
     return x, y
+
+def pearson_r(data_1, data_2):
+    '''Calculates Pearson correlection coefficient'''
+    return np.corrcoef(data_1, data_2)[0,1]
+
+def draw_bs_pairs(x, y, func, size=1):
+    """Perform pairs bootstrap for replicates."""
+
+    # Set up array of indices to sample from: inds
+    inds = np.arange(len(x))
+
+    # Initialize replicates
+    bs_replicates = np.empty(size)
+
+
+    # Generate replicates
+    for i in range(size):
+        bs_inds = np.random.choice(inds, len(inds))
+        bs_x, bs_y = x[bs_inds], y[bs_inds]
+        bs_replicates[i] = func(bs_x, bs_y)
+
+    return bs_replicates
