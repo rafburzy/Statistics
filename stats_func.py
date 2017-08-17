@@ -18,6 +18,13 @@ def pearson_r(data_1, data_2):
     '''Calculates Pearson correlection coefficient'''
     return np.corrcoef(data_1, data_2)[0,1]
 
+# bootstrap functions
+
+def bootstrap_replicate_1d(data, func):
+    '''Generate bootstrap replicate of 1D data'''
+    bs_sample = np.random.choice(data, len(data))
+    return func(bs_sample)
+
 def draw_bs_pairs(x, y, func, size=1):
     """Perform pairs bootstrap for replicates."""
 
