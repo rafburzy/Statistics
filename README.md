@@ -1,8 +1,11 @@
 # Statistics
-This repository contains functions used in statistics with Python. 
+This repository contains functions used in statistics with Python.
 
 ### ECDF
-First available function is Empirical Cumulative Density Function for one dimensional array. This function is used to visualize data. The examples of its usage are shown in the **ECDF_usage** Jupyter Notebook.
+First available function is Empirical Cumulative Density Function for one dimensional array. This function is used to visualize data. The examples of its usage are shown in the **01_ECDF_usage** Jupyter Notebook.
 
 ### Regression
-Second added notebook is **regression** which shows how to calculate regression coefficients for the iris dataset selected columns.
+Second added notebook is **02_regression** which shows how to calculate regression coefficients for the iris dataset selected columns.
+
+### Bootstrap
+Third notebook presents the use of bootstrapping technique to calculate the impact on the mean value of sepal length and sepal width and calculation of the confidence intervals. The examples are shown in **03_bootstrap_replicates** notebook.
